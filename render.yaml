@@ -1,0 +1,39 @@
+# Render Blueprint for the LSI site.
+# Deploy: Render Dashboard → New → Blueprint → connect this repo.
+# Or via the Render API (a web service + Postgres) using these settings.
+services:
+  - type: web
+    name: lsi-site
+    runtime: node
+    plan: free
+    region: ohio
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22.14.0"
+      # Postgres connection (provisioned below). Enables quote persistence.
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lsi-db
+          property: connectionString
+      # Owner's text-alert number (Linq). Safe to commit — not a secret.
+      - key: SHOP_NOTIFICATION_PHONE
+        value: "+17708417096"
+      # Secrets — set these in the Render dashboard (sync:false = not in repo).
+      - key: RESEND_API_KEY
+        sync: false
+      - key: QUOTE_FROM_EMAIL
+        sync: false
+      - key: SHOP_NOTIFICATION_EMAIL
+        sync: false
+      - key: LINQ_API_KEY
+        sync: false
+      - key: LINQ_FROM_NUMBER
+        sync: false
+
+databases:
+  - name: lsi-db
+    plan: free
+    region: ohio

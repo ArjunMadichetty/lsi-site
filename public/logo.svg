@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PLACEHOLDER LSI wordmark.
+  TODO(client): replace with the real logo. Save the supplied file as
+  public/logo.png (or public/logo.svg) and the site will pick it up.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 130" width="260" height="130" role="img" aria-label="LSI">
+  <g font-family="Georgia, 'Times New Roman', 'Playfair Display', serif" font-style="italic" font-weight="700" font-size="118" text-anchor="middle" letter-spacing="-2">
+    <!-- dark green outer outline -->
+    <text x="130" y="100" fill="none" stroke="#0F3D1A" stroke-width="14" stroke-linejoin="round" paint-order="stroke">LSI</text>
+    <!-- white halo -->
+    <text x="130" y="100" fill="none" stroke="#ffffff" stroke-width="8" stroke-linejoin="round" paint-order="stroke">LSI</text>
+    <!-- green fill -->
+    <text x="130" y="100" fill="#2F8A45">LSI</text>
+  </g>
+</svg>
