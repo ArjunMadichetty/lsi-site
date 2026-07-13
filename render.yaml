@@ -18,19 +18,12 @@ services:
         fromDatabase:
           name: lsi-db
           property: connectionString
-      # Owner's text-alert number (Linq). Safe to commit — not a secret.
-      - key: SHOP_NOTIFICATION_PHONE
-        value: "+17708417096"
-      # Secrets — set these in the Render dashboard (sync:false = not in repo).
+      # Email notifications (Resend). Secrets set in the Render dashboard.
       - key: RESEND_API_KEY
         sync: false
       - key: QUOTE_FROM_EMAIL
         sync: false
       - key: SHOP_NOTIFICATION_EMAIL
-        sync: false
-      - key: LINQ_API_KEY
-        sync: false
-      - key: LINQ_FROM_NUMBER
         sync: false
 
 databases:
