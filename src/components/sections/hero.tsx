@@ -50,8 +50,8 @@ export function Hero() {
               height={170}
               className="mx-auto h-28 w-auto sm:h-36"
             />
-            <span className="absolute bottom-3 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground/70">
-              Precision · Machined · Complete
+            <span className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] font-medium uppercase tracking-[0.26em] text-brand-dark/70">
+              {site.fullName}
             </span>
           </div>
         </div>

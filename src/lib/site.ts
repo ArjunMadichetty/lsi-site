@@ -7,11 +7,11 @@
  */
 export const site = {
   name: "LSI",
-  // TODO(client): confirm the full/legal company name.
-  legalName: "LSI Manufacturing",
+  fullName: "Linkage Solutions",
+  legalName: "Linkage Solutions",
   tagline: "Precision CNC Machining & Manufacturing",
   description:
-    "LSI is a precision CNC manufacturing shop delivering tight-tolerance machined parts, prototypes, and production runs. Request a quote and get parts made right, on time.",
+    "Linkage Solutions (LSI) is a precision CNC manufacturing shop delivering tight-tolerance machined parts, prototypes, and production runs. Request a quote and get parts made right, on time.",
   url: "https://lsi-manufacturing.com", // TODO(client): production domain
 
   // --- Contact ---

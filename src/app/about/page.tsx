@@ -37,9 +37,9 @@ export default function AboutPage() {
             <p className="eyebrow">Our story</p>
             <div className="mt-4 space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
-                {site.name} is a precision CNC manufacturing shop serving demanding
-                industries with tight-tolerance machined parts — from one-off
-                prototypes to documented production runs.
+                {site.fullName} ({site.name}) is a precision CNC manufacturing
+                shop serving demanding industries with tight-tolerance machined
+                parts — from one-off prototypes to documented production runs.
               </p>
               <p>
                 {/* TODO(client): personalize this paragraph with the shop's history. */}

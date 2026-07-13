@@ -29,8 +29,8 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.tagline}`,
-    template: `%s — ${site.name}`,
+    default: `${site.fullName} (${site.name}) — ${site.tagline}`,
+    template: `%s — ${site.fullName}`,
   },
   description: site.description,
   keywords: [
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.fullName} (${site.name}) — ${site.tagline}`,
     description: site.description,
-    siteName: site.name,
+    siteName: site.fullName,
     url: site.url,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.fullName} (${site.name}) — ${site.tagline}`,
     description: site.description,
   },
   icons: { icon: "/logo.svg" },
