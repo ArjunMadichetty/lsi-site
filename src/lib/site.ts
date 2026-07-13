@@ -12,12 +12,12 @@ export const site = {
   tagline: "Precision CNC Machining & Manufacturing",
   description:
     "Linkage Solutions (LSI) is a precision CNC manufacturing shop delivering tight-tolerance machined parts, prototypes, and production runs. Request a quote and get parts made right, on time.",
-  url: "https://lsi-manufacturing.com", // TODO(client): production domain
+  url: "https://linkagesolutions.org",
 
   // --- Contact ---
   phone: "(770) 841-7096",
   phoneHref: "tel:+17708417096",
-  email: "quotes@lsi-manufacturing.com", // TODO(client) — confirm real email
+  email: "Dcarlisi@linkagesolutions.net",
   address: {
     line1: "000 Industrial Parkway", // TODO(client)
     line2: "",
@@ -30,7 +30,7 @@ export const site = {
   // Where the quote/contact form notifications are delivered.
   // These drive DB + email + SMS. Server reads real values from env vars.
   notify: {
-    email: "quotes@lsi-manufacturing.com", // TODO(client) — overridden by SHOP_NOTIFICATION_EMAIL
+    email: "Dcarlisi@linkagesolutions.net", // overridden by SHOP_NOTIFICATION_EMAIL
     phone: "+17708417096", // overridden by SHOP_NOTIFICATION_PHONE
   },
 
