@@ -17,9 +17,9 @@ export function CapabilitiesBand() {
               Built to hold the tightest specs
             </h2>
             <p className="mt-4 max-w-md text-balance leading-relaxed text-white/70">
-              Calibrated multi-axis machining centers, a climate-controlled
-              inspection lab, and a wide material range — the capacity to make
-              your part exactly to print.
+              Haas CNC machining centers, CNC and manual lathes, a Bridgeport
+              mill, and an in-house MIG welding bay — plus a wide material range
+              and the capacity to make your part exactly to print.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/15 bg-white/10">

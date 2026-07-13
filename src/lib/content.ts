@@ -17,28 +17,28 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "cnc-milling",
-    title: "CNC Milling",
-    short: "3-, 4-, and 5-axis milling for complex geometries.",
+    title: "CNC & Manual Milling",
+    short: "Haas CNC machining centers plus a manual Bridgeport mill.",
     description:
-      "Multi-axis vertical and horizontal machining centers produce complex, tight-tolerance parts from prototype through production. From simple brackets to intricate 5-axis contours, we hold demanding specs run after run.",
+      "Haas CNC vertical machining centers produce precise, repeatable milled parts from prototype through production, while a manual Bridgeport mill handles fixtures, modifications, and quick short-run work — from simple brackets to complex machined housings.",
     bullets: [
-      "3-, 4- & simultaneous 5-axis milling",
-      "Tolerances to ±0.0002\"",
-      "Envelopes up to 40\" × 20\" × 25\"",
-      "Aluminum, steel, stainless, titanium & plastics",
+      "3-axis CNC milling (Haas VMCs)",
+      "Manual milling (Bridgeport, DRO)",
+      "Tolerances to ±0.0005\"",
+      "Metals & plastics",
     ],
   },
   {
     slug: "cnc-turning",
-    title: "CNC Turning",
-    short: "Live-tooling lathes for precision turned components.",
+    title: "CNC & Manual Turning",
+    short: "CNC mill-turn lathe plus a manual engine lathe.",
     description:
-      "CNC lathes with live tooling and bar feeders turn precision shafts, bushings, fittings, and threaded components. Mill-turn capability lets us finish complex parts complete in a single setup.",
+      "Our CNC mill-turn lathe finishes round parts complete — turning with milled features in a single setup — while a manual engine lathe handles quick one-offs, rework, and repairs. Precision shafts, bushings, fittings, and threaded components.",
     bullets: [
-      "Multi-axis mill-turn centers",
-      "Bar capacity up to 3\" diameter",
-      "Live tooling & sub-spindle",
-      "High-volume, lights-out production",
+      "CNC mill-turn lathe",
+      "Manual engine lathe",
+      "Shafts, bushings & fittings",
+      "One-offs, rework & production",
     ],
   },
   {
@@ -81,6 +81,19 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "welding-fabrication",
+    title: "MIG Welding & Fabrication",
+    short: "In-house MIG welding for weldments and assemblies.",
+    description:
+      "In-house MIG welding and fabrication lets us join, build up, and assemble weldments without sending work to an outside vendor — keeping your parts, quality, and lead times under one roof. Welded and machined complete.",
+    bullets: [
+      "In-house MIG welding",
+      "Weldments & fabricated assemblies",
+      "Steel & aluminum",
+      "Welded + machined complete",
+    ],
+  },
+  {
     slug: "inspection-quality",
     title: "Inspection & Quality",
     short: "CMM-verified parts with full documentation.",
@@ -98,10 +111,10 @@ export const services: Service[] = [
 export type Capability = { label: string; value: string; note?: string };
 
 export const capabilities: Capability[] = [
-  { label: "Tightest tolerance", value: "±0.0002\"", note: "on precision features" },
-  { label: "Max part envelope", value: "40 × 20 × 25\"", note: "5-axis milling" },
-  { label: "Max turned diameter", value: "3.0\"", note: "bar feed" },
-  { label: "Axes", value: "3 · 4 · 5", note: "simultaneous milling" },
+  { label: "CNC vertical mills", value: "2× Haas", note: "3-axis machining centers" },
+  { label: "Turning", value: "CNC + Manual", note: "mill-turn & engine lathe" },
+  { label: "In-house welding", value: "MIG", note: "weld & fabricate" },
+  { label: "Tightest tolerance", value: "±0.0005\"", note: "on precision features" },
 ];
 
 export const materials: string[] = [
@@ -138,7 +151,7 @@ export const processSteps: Step[] = [
 
 export const stats: { value: string; label: string }[] = [
   { value: "25+", label: "Years machining precision parts" },
-  { value: "±0.0002\"", label: "Tolerances held in production" },
+  { value: "±0.0005\"", label: "Tolerances held in production" },
   { value: "50+", label: "Materials machined" },
   { value: "98%", label: "On-time delivery" },
 ];
@@ -147,5 +160,70 @@ export const differentiators: { title: string; description: string }[] = [
   { title: "Quality you can document", description: "In-process and final inspection with CMM verification, first-article reports, and full material traceability on request." },
   { title: "Engineering that saves you money", description: "DFM feedback on every quote helps reduce cost and lead time before a single chip is cut." },
   { title: "On-time, every time", description: "Predictable scheduling, stocking programs, and lights-out capacity keep your line running." },
-  { title: "One shop, complete parts", description: "Milling, turning, finishing, and assembly under one roof — fewer vendors, tighter control." },
+  { title: "One shop, complete parts", description: "CNC & manual milling, turning, MIG welding, finishing, and assembly under one roof — fewer vendors, tighter control." },
+];
+
+export type Machine = {
+  name: string;
+  tag: string;
+  description: string;
+  specs: string[];
+  samples: string;
+};
+
+/**
+ * The shop floor. TODO(client): confirm exact makes, models, counts, and travels
+ * once the owner sends the real machine list.
+ */
+export const machines: Machine[] = [
+  {
+    name: "Haas CNC Vertical Mills",
+    tag: "2 machines · 3-axis VMC",
+    description:
+      "Our workhorse Haas vertical machining centers run tight-tolerance milled parts from prototype through production — brackets, housings, plates, and manifolds.",
+    specs: [
+      "3-axis CNC milling",
+      "Prototype & production runs",
+      "Metals & engineering plastics",
+      "Repeatable, in-process inspected",
+    ],
+    samples: "Brackets · housings · manifolds · plates",
+  },
+  {
+    name: "CNC Mill-Turn Lathe",
+    tag: "Turning + milling",
+    description:
+      "A CNC turning center that finishes round parts complete — turning with milled features in a single setup for shafts, bushings, and fittings.",
+    specs: [
+      "CNC turning",
+      "Milled features in one setup",
+      "Threading, boring & grooving",
+      "Short & long runs",
+    ],
+    samples: "Shafts · bushings · threaded fittings",
+  },
+  {
+    name: "Manual Engine Lathe",
+    tag: "Manual turning",
+    description:
+      "For quick turned parts, rework, and one-offs, a manual lathe is often the fastest path to a finished part — facing, boring, and threading on demand.",
+    specs: ["Manual turning", "Fast one-offs & rework", "Facing, boring & threading", "Repairs & modifications"],
+    samples: "One-offs · rework · repairs",
+  },
+  {
+    name: "Bridgeport Manual Mill",
+    tag: "Knee mill · DRO",
+    description:
+      "The classic Bridgeport knee mill handles fixtures, modifications, and short-run parts that don't call for full CNC — with a digital readout for accuracy.",
+    specs: ["Manual milling", "Digital readout (DRO)", "Fixtures & modifications", "Short-run parts"],
+    samples: "Fixtures · modifications · short runs",
+  },
+  {
+    name: "MIG Welding & Fabrication",
+    tag: "In-house welding",
+    description:
+      "In-house MIG welding lets us join, build up, and fabricate weldments and assemblies without an outside vendor — keeping quality and lead time under our control, then machining welded parts complete.",
+    specs: ["MIG welding", "Weldments & assemblies", "Steel & aluminum", "Weld + machine complete"],
+    samples: "Weldments · frames · brackets · assemblies",
+  },
 ];

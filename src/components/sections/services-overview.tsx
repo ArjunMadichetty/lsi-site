@@ -23,7 +23,7 @@ export function ServicesOverview() {
         </div>
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
+          {services.slice(0, 6).map((s, i) => (
             <Link
               key={s.slug}
               href={`/services#${s.slug}`}

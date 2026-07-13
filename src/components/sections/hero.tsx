@@ -5,10 +5,10 @@ import { site } from "@/lib/site";
 import { stats } from "@/lib/content";
 
 const trust = [
-  "±0.0002\" tolerances",
-  "3-, 4- & 5-axis",
+  "±0.0005\" tolerances",
+  "CNC & manual machining",
+  "In-house MIG welding",
   "Prototype → production",
-  "Made in USA",
 ];
 
 export function Hero() {
